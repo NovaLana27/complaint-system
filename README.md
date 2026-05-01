@@ -22,7 +22,7 @@ The system routes each complaint to the correct department.
 ## Setup Instructions
 
 ### Step 1 - Clone the repository
-git clone https://github.com/NovaLana27
+git clone https://github.com/NovaLana27/complaint-system
 ### Step 2 - Create a virtual environment
 python -m venv venv
 ### Step 3 - Activate the virtual environment
