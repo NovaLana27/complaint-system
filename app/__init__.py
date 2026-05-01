@@ -11,7 +11,9 @@ def create_app():
     
     db.init_app(app)
     login_manager.init_app(app)
-    login_manager.login_view = 'auth.login'
+    @login_manager.unauthorized_handler
+    def unauthorized():
+        return jsonify({'error': 'Unauthorized', 'message': 'Authentication required'}), 401
     
     from app.auth import routes as auth_routes
     from app.complaints import routes as complaints_routes
