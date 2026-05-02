@@ -1,3 +1,4 @@
+# Admin routes
 from flask import Blueprint, request, jsonify
 from flask_login import current_user
 from app import db
