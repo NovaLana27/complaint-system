@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<div class="card">
+  <h1>Redeemer's University Complaint System</h1>
+  <p>
+    Submit student complaints, track status, and manage requests in one place.
+  </p>
+  {% if current_user.is_authenticated %}
+  <p>Welcome back, {{ current_user.username }}.</p>
+  <a class="button" href="{{ url_for('complaints.user_dashboard') }}"
+    >Go to your complaints</a
+  >
+  {% else %}
+  <a class="button" href="{{ url_for('auth.login') }}">Login</a>
+  <a class="button button-secondary" href="{{ url_for('auth.register') }}"
+    >Create account</a
+  >
+  {% endif %}
+</div>
+{% endblock %}
